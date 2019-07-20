@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/regions', 'DropdownController@index');
+Route::post('/regions/fetch', 'DropdownController@fetch')->name('dropdown.fetch');
